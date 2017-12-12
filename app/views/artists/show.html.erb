@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @artist.name %>
+</p>
+
+<p>
+  <strong>Hits:</strong>
+  <%= @artist.hits %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @artist.genre_id %>
+</p>
+
+<p>
+	<strong>Songs: </strong>
+		<% @artist.songs.each do |song| %>
+			<ul>
+				<li><%= song.name %></li>
+			</ul>
+		<% end %>
+</p>
+
+<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<p class="btn"><%= link_to 'Back', artists_path %></p>
